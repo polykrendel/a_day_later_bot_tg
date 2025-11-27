@@ -62,7 +62,7 @@ public class Bot implements LongPollingSingleThreadUpdateConsumer {
 
                 log(sticker);
 
-                if (anime.contains(stickerPackName)) {
+                if (anime.contains(stickerPackName) || sticker.getFileId().equals("CAACAgIAAxkBAANXaShp6x6WeGFi0dmd7OYUvKPtzrIAAhVmAAKCK3BJJFB05GO7KCs2BA")) {
                     sendSticker(chatId);
                 }
             }
@@ -88,5 +88,6 @@ public class Bot implements LongPollingSingleThreadUpdateConsumer {
         Date date = new Date();
         System.out.println(dateFormat.format(date));
         System.out.println("Набор стикеров:\n" + sticker.getSetName());
+        System.out.println(sticker.getFileId());
     }
 }
